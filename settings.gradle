@@ -1,0 +1,2 @@
+rootProject.name = 'microservices-in-boot'
+include 'config-service','edge-service','order-service','catalog-service'
