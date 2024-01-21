@@ -1,14 +1,14 @@
 # Voyager Coffee Shop System
 
-This system demostrate following cloud native usage:
-* Centralized configuration management with Spring Cloud Config Server
-* Reactive servers with Spring WebFlux and Spring Data R2DBC
-* Edge servers and Spring Cloud Gateway
-* Fault tolerance with Spring Cloud Circuit Breaker and Resilience4J
-* Request rate limiting with Spring Cloud Gateway and Redis
-* Managing external access with Kubernetes Ingress
-* Managing containers with Docker Compose
-* Local Kubernetes development with Tilt
+This system demostrates following cloud native usage:
+* Centralized configuration management with `Spring Cloud Config Server`
+* Reactive servers with Spring WebFlux and `Spring Data R2DBC`
+* Edge servers and `Spring Cloud Gateway`
+* Fault tolerance with `Spring Cloud Circuit Breaker` and Resilience4J
+* Request rate limiting with `Spring Cloud Gateway` and `Redis`
+* Managing external access with `Kubernetes Ingress`
+* Managing containers with `Docker Compose`
+* Local Kubernetes development with `Tilt`
 
 The system run following containers/services:
 * postgres
