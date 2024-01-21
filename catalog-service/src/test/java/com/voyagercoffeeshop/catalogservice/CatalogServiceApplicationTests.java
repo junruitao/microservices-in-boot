@@ -55,7 +55,7 @@ class CatalogServiceApplicationTests {
 //                .expectStatus().isCreated()
 //                .expectBody(Product.class).value(actualProduct-> {
 //                    assertThat(actualProduct).isNotNull();
-//                    assertThat(actualProduct.isbn()).isEqualTo(expectedProduct.isbn());
+//                    assertThat(actualProduct.catalog()).isEqualTo(expectedProduct.catalog());
 //                });
 //    }
 //
@@ -71,7 +71,7 @@ class CatalogServiceApplicationTests {
 //                .expectStatus().isCreated()
 //                .expectBody(Product.class).value(product -> assertThat(product).isNotNull())
 //                .returnResult().getResponseBody();
-//        var productToUpdate = new Product(createdProduct.id(), createdProduct.isbn(), createdProduct.title(), createdProduct.author(), 7.95,
+//        var productToUpdate = new Product(createdProduct.id(), createdProduct.catalog(), createdProduct.title(), createdProduct.author(), 7.95,
 //                createdProduct.publisher(), createdProduct.createdDate(), createdProduct.lastModifiedDate(), createdProduct.version());
 //
 //        webTestClient

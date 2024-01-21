@@ -1,17 +1,31 @@
-#Voyager CoffeeShop system
+# Voyager Coffee Shop System
+
+This system demostrate following cloud native usage:
+* Centralized configuration management with Spring Cloud Config Server
+* Reactive servers with Spring WebFlux and Spring Data R2DBC
+* Edge servers and Spring Cloud Gateway
+* Fault tolerance with Spring Cloud Circuit Breaker and Resilience4J
+* Request rate limiting with Spring Cloud Gateway and Redis
+* Managing external access with Kubernetes Ingress
+* Managing containers with Docker Compose
+* Local Kubernetes development with Tilt
+
+The system run following containers/services:
+* postgres
+* redis
+* config-service
+* edge-service
+* order-service
+* catalog-service
 
 ## Catalog Service
 
 This application is part of the Voyager CoffeeShop system and provides the functionality for managing
 the products in the CoffeeShop catalog. 
 
-http://localhost:9001/
-http://localhost:9001/products/
-http://localhost:9001/products/Espresso/Big
 
 
-
-## REST API
+### REST API
 
 | Endpoint	      | Method   | Req. body  | Status | Resp. body     | Description    		   	     |
 |:---------------:|:--------:|:----------:|:------:|:--------------:|:-------------------------------|
@@ -24,25 +38,17 @@ http://localhost:9001/products/Espresso/Big
 |                 |          |            | 200    | Product          | Create a product with the given ISBN. |
 | `/products/{category}/{size}` | `DELETE` |            | 204    |                | Delete the product with the given Category & Size. |
 
-## Useful Commands
-
-| Gradle Command	         | Description                                   |
-|:---------------------------|:----------------------------------------------|
-| `./gradlew clean`        | Clean  application.                          |:----------------------------------------------|
-| `./gradlew bootRun`        | Run the application.                          |
-| `./gradlew build`          | Build the application.                        |
-| `./gradlew test`           | Run tests.                                    |
-| `./gradlew bootJar`        | Package the application as a JAR.             |
-| `./gradlew bootBuildImage` | Package the application as a container image. |
 
 
 ## Config Service
+http://localhost:8888/config-service/product
 
 ## Order Service
+http://localhost:9002/orders
 
 ## Edge Service
-http://localhost:9001/orders
-http://localhost:9001/products/
+http://localhost:9000/orders
+http://localhost:9000/products/
 
 ## docker compose
 ```
@@ -55,3 +61,14 @@ To run in Kubernetes, run `tilt` after `create-cluster`
 ```
 tilt up
 ```
+
+## Useful Commands
+
+| Gradle Command	         | Description                                   |
+|:---------------------------|:----------------------------------------------|
+| `./gradlew clean`        | Clean  application.                          |:----------------------------------------------|
+| `./gradlew bootRun`        | Run the application.                          |
+| `./gradlew build`          | Build the application.                        |
+| `./gradlew test`           | Run tests.                                    |
+| `./gradlew bootJar`        | Package the application as a JAR.             |
+| `./gradlew bootBuildImage` | Package the application as a container image. |
