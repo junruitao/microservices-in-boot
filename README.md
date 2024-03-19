@@ -1,5 +1,5 @@
 # Voyager Coffee Shop System
-
+![Preview](https://github.com/junruitao/microservices-in-boot/blob/master/background.png)
 This system demostrates following cloud native usage:
 * Centralized configuration management with `Spring Cloud Config Server`
 * Reactive servers with Spring WebFlux and `Spring Data R2DBC`
